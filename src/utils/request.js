@@ -143,7 +143,7 @@
 
 import axios from 'axios'
 
-const apiBase = process.env.VUE_APP_BASE_URL || 'https://hdx.caonima.com'
+const apiBase = process.env.VUE_APP_BASE_URL || 'https://hdx.caonima.live'
 
 const service = axios.create({
   // process.env.NODE_ENV === 'development' 来判断是否开发环境
