@@ -143,8 +143,7 @@
 
 import axios from 'axios'
 
-const apiBase =
-  process.env.VUE_APP_BASE_URL || 'http://jsonplaceholder.typicode.com'
+const apiBase = process.env.VUE_APP_BASE_URL || 'http://127.0.0.1:10010'
 
 const service = axios.create({
   // process.env.NODE_ENV === 'development' 来判断是否开发环境
