@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import { getGithubShort } from '../api'
+// import { getGithubShort } from '../api'
 // @ is an alias to /src
 
 export default {
@@ -82,22 +82,24 @@ export default {
         }
       })
 
-      var fromData = new FormData()
-      fromData.append('url', baseUrl)
+      // var fromData = new FormData()
+      // fromData.append('url', baseUrl)
 
-      getGithubShort(fromData).then((res) => {
-        this.$copyText(res.message).then(
-          () => {
-            this.$message({
-              message: '已成功复制到剪切板',
-              type: 'success'
-            })
-          },
-          (error) => {
-            this.$message.error(error)
-          }
-        )
-      })
+      // getGithubShort(fromData).then((res) => {
+
+      // })
+
+      this.$copyText(baseUrl).then(
+        () => {
+          this.$message({
+            message: '已成功复制到剪切板',
+            type: 'success'
+          })
+        },
+        (error) => {
+          this.$message.error(error)
+        }
+      )
     }
   }
 }
